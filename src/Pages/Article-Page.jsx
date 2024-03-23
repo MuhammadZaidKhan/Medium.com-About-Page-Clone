@@ -7,10 +7,12 @@ const ArticlePage = () => {
 
     return (
         <>
-            {/* <h1>{article.title}</h1> */}
-            {article.content.map(paragraph => (
-                <p className='mt-5'>{paragraph}</p>
-            ))}
+            <div className='pt-5 px-3 bg-background text-white min-h-screen'>
+                <h1 className='mb-3'>{article.name}</h1>
+                {article.content.map(paragraph => (
+                    <p>{paragraph}</p>
+                ))}
+            </div>
         </>
     );
 }
