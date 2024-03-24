@@ -5,7 +5,7 @@ const About = () => {
         <div>
             <div className='bg-background min-h-screen'>
                 <div className='text-white pb-28'>
-                    <h1 className='font-serif font-normal text-8xl pt-28 pl-8'>Everyone has a <br /> story to tell.</h1>
+                    <h1 className='font-serif font-normal text-5xl md:text-7xl pt-28 pl-8'>Everyone has a <br /> story to tell.</h1>
                     <p className='font-serif font-normal text-xl leading-8 pt-20 pl-8 flex flex-wrap'>Medium is a home for human stories and ideas. Here, anyone can share <br /> insightful perspectives, useful knowledge, and life wisdom with the <br /> world—without building a mailing list or a following first. The internet is <br /> noisy and chaotic; Medium is quiet yet full of insight. It’s simple, <br /> beautiful, collaborative, and helps you find the right audience for <br /> whatever you have to say.</p>
 
                     <p className='font-serif font-normal text-xl leading-8 pt-5 pl-8 flex flex-wrap'>We believe that what you read and write matters. Words can divide or <br /> empower us, inspire or discourage us. In a world where the most <br /> sensational and surface-level stories often win, we’re building a system <br /> that rewards depth, nuance, and time well spent. A space for thoughtful <br /> conversation more than drive-by takes, and substance over packaging.</p>
