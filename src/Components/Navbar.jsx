@@ -1,16 +1,29 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import { useState } from 'react'
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 export default function Header() {
+    const location = useLocation();
     const [nav, setNav] = useState(false)
     const handleNav = () => {
         setNav(!nav)
-    }
+    };
+    const getBackgroundColor = () => {
+        switch (location.pathname) {
+            case '/':
+                return 'bg-amber-400 text-black';
+            case '/about':
+                return 'bg-background';
+            case '/articles':
+                return 'bg-white text-black';
+            default:
+                return 'bg-white text-black'; // Default to home page color
+        }
+    };
     return (
         <>
             {/* Desktop Navbar */}
-            <div className="sticky top-0 w-full h-20 shadow-md z-[100] bg-background text-white">
+            <div className={`sticky top-0 w-full h-20 shadow-md z-[100] text-white ${getBackgroundColor()}`}>
                 <div className="flex justify-between items-center w-full h-full px-4 2xl:px-16 py-10">
                     <Link to='/'>
                         <img
@@ -73,19 +86,18 @@ export default function Header() {
 
                         <div className="py-4 flex flex-col">
                             <ul className="uppercase">
-                                <Link to='/'>
+                                <Link to='/' onClick={() => setNav(false)}>
                                     <li className="py-4">Home</li>
                                 </Link>
 
-                                <Link to={'/about'}>
+                                <Link to='/about' onClick={() => setNav(false)}>
                                     <li className="py-4">About</li>
                                 </Link>
 
-
-
-                                <Link to={'/articles'}>
+                                <Link to='/articles' onClick={() => setNav(false)}>
                                     <li className="py-4">Articles</li>
                                 </Link>
+
 
                             </ul>
                             <div></div>

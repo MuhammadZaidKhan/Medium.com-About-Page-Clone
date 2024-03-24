@@ -7,7 +7,7 @@ const ArticlePage = () => {
 
     return (
         <>
-            <div className='pt-5 px-3 bg-background text-white min-h-screen'>
+            <div className='pt-5 px-3 bg-white text-black min-h-screen'>
                 <h1 className='mb-3'>{article.name}</h1>
                 {article.content.map(paragraph => (
                     <p>{paragraph}</p>
