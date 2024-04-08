@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import articles from './Article-Content';
+import Slider from '../Components/Slider';
 
 const ArticlesListPage = () => {
     return (
@@ -13,6 +14,8 @@ const ArticlesListPage = () => {
                     <hr />
                 </Link >
             ))}
+
+            <Slider />
         </>
     );
 }
